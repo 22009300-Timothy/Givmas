@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Givmas - Wishlist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🎄 Givmas</div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="wishlist">
+        <h1>Create Your Wishlist</h1>
+        <p>Add, edit, and share your holiday wishlist.</p>
+        
+        <form id="wishlistForm">
+            <label for="itemName">Gift Item:</label>
+            <input type="text" id="itemName" placeholder="Enter gift item" required>
+            
+            <label for="itemLink">Link to Item (optional):</label>
+            <input type="url" id="itemLink" placeholder="Paste link to the gift">
+            
+            <label for="itemNotes">Notes (optional):</label>
+            <textarea id="itemNotes" placeholder="Add notes or details"></textarea>
+            
+            <button type="submit">Add to Wishlist</button>
+        </form>
+        
+        <h2>My Wishlist</h2>
+        <ul id="wishlistItems">
+            <!-- Wishlist items will be dynamically added here -->
+        </ul>
+    </section>
+    <footer>
+        <p>© 2024 Givmas. All rights reserved.</p>
+    </footer>
+
+    <script src="wishlist.js"></script>
+</body>
+</html>

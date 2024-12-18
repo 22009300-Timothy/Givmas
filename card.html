@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Gift Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #016241;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: white;
+      color: black;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 300px;
+    }
+
+    h2 {
+      color: #016241;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+
+    .from-to {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Image added here -->
+    <img src="https://hips.hearstapps.com/hmg-prod/images/gift-exchange-ideas-1669662108.jpeg" alt="Gift Exchange">
+
+    <h2>Season's Greetings!</h2>
+    <p>Here's a special gift to brighten your day and spread joy this holiday season.</p>
+
+    <div class="from-to">
+      <p>From: <span id="fromName"></span></p>
+      <p>To: <span id="toName"></span></p>
+    </div>
+  </div>
+
+  <script>
+    // Retrieve stored data
+    const giver = localStorage.getItem("giver") || "Unknown";
+    const recipient = localStorage.getItem("recipient") || "Friend";
+
+    // Display the names
+    document.getElementById("fromName").textContent = giver;
+    document.getElementById("toName").textContent = recipient;
+  </script>
+</body>
+</html>
