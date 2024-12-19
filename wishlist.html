@@ -3,46 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Givmas - Wishlist</title>
+    <title>🎄 Givmas - Christmas Wishlist 🎁</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo">🎄 Givmas</div>
+        <div class="logo">🎅 Givmas - Christmas Wishlist 🎁</div>
         <nav>
             <ul>
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="wishlist.html">Wishlist</a></li>
-                <li><a href="forum.html">Forum</a></li>
+                <li><a href="#forum">Discussion Forum</a></li>
+                <li><a href="#gift-exchange">Gift Exchange</a></li>
+                <li><a href="#wishlist">Wishlist</a></li>
+                <li><a href="#angel-tree">Angel Tree</a></li>
             </ul>
         </nav>
     </header>
-    <section id="wishlist">
-        <h1>Create Your Wishlist</h1>
-        <p>Add, edit, and share your holiday wishlist.</p>
-        
-        <form id="wishlistForm">
-            <label for="itemName">Gift Item:</label>
-            <input type="text" id="itemName" placeholder="Enter gift item" required>
-            
-            <label for="itemLink">Link to Item (optional):</label>
-            <input type="url" id="itemLink" placeholder="Paste link to the gift">
-            
-            <label for="itemNotes">Notes (optional):</label>
-            <textarea id="itemNotes" placeholder="Add notes or details"></textarea>
-            
-            <button type="submit">Add to Wishlist</button>
-        </form>
-        
-        <h2>My Wishlist</h2>
-        <ul id="wishlistItems">
-            <!-- Wishlist items will be dynamically added here -->
-        </ul>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>🎄 Welcome to Your Christmas Wishlist 🎄</h1>
+        <p>Create, manage, and share your perfect holiday wishlist with friends and family!</p>
+        <a href="#wishlist" class="cta-button">Start Your Wishlist</a>
     </section>
+
+    <!-- Wishlist Section -->
+    <section id="wishlist" class="feature-box">
+        <h2>🎁 My Christmas Wishlist 🎁</h2>
+        <form id="wishlistForm" class="wishlist-form">
+            <label for="itemName">Gift Name</label>
+            <input type="text" id="itemName" placeholder="e.g., Christmas Sweater" required>
+            
+            <label for="itemDescription">Description</label>
+            <textarea id="itemDescription" placeholder="e.g., Red sweater with reindeer patterns"></textarea>
+            
+            <label for="itemPrice">Price</label>
+            <input type="number" id="itemPrice" placeholder="e.g., 49.99" step="0.01" min="0">
+            
+            <label for="itemLink">Product URL</label>
+            <input type="url" id="itemLink" placeholder="e.g., https://example.com/product">
+
+            <label for="itemImage">Upload Image (optional)</label>
+            <input type="file" id="itemImage" accept="image/*">
+
+            <button type="submit">🎁 Add Gift</button>
+            <button type="button" id="cancelButton">❌ Cancel</button>
+        </form>
+
+        <div id="wishlistItems" class="wishlist-container">
+            <!-- Wishlist items will appear here -->
+        </div>
+
+        <button id="shareButton">🎄 Share Wishlist</button>
+        <p id="shareableLink" style="display: none;">
+            Shareable Link: <a href="#" id="generatedLink" target="_blank"></a>
+        </p>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Givmas. All rights reserved.</p>
+        <p>🎅 Merry Christmas! © 2024 Givmas 🎄</p>
     </footer>
 
+    <!-- Script -->
     <script src="wishlist.js"></script>
 </body>
 </html>

@@ -3,50 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Givmas</title>
+    <title>Givmas - Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">🎄 Givmas</div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#forum">Discussion Forum</a></li>
+                <li><a href="#gift-exchange">Gift Exchange</a></li>
+                <li><a href="#wishlist">Wishlist</a></li>
+                <li><a href="#angel-tree">Angel Tree</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
     <section id="hero">
-        <h1>Spread Joy This Christmas</h1>
-        <p>Join us in making a difference by contributing to our community this festive season.</p>
-        <a href="#features" class="cta-button">Get Started</a>
+        <h1>Welcome to Givmas</h1>
+        <p>Make a difference this Christmas through our platform.</p>
+        <a href="#features" class="cta-button">Explore Features</a>
     </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Generosity Hub is a platform that connects people to spread kindness and joy during Christmas through acts of generosity.</p>
-    </section>
+
+    <!-- Features Section -->
     <section id="features">
-        <h2>Features</h2>
-        <div class="feature-box">
-            <h3>Volunteer Opportunities</h3>
-            <p>Find and sign up for volunteer opportunities in your area.</p>
+        <!-- Discussion Forum -->
+        <div id="forum" class="feature-box">
+            <h2>Discussion Forum</h2>
+            <p>Engage with the community to share ideas and discuss impactful initiatives.</p>
         </div>
-        <div class="feature-box">
-            <h3>Secret Santa</h3>
-            <p>Participate in community-wide gift exchanges to share the holiday spirit.</p>
+
+        <!-- Gift Exchange -->
+        <div id="gift-exchange" class="feature-box">
+            <h2>Gift Exchange</h2>
+            <p>Participate in our Secret Santa program and share joy with others.</p>
         </div>
-        <div class="feature-box">
-            <h3>Community Events</h3>
-            <p>Discover local events and celebrations to join and contribute.</p>
+
+        <!-- Wishlist Section -->
+        <div id="wishlist" class="feature-box">
+            <h2>Wishlist</h2>
+            <p>Create, manage, and share your holiday wishlist.</p>
+
+            <!-- Wishlist Form -->
+            <form id="wishlistForm" class="wishlist-form">
+                <label for="itemName">Enter the name</label>
+                <input type="text" id="itemName" placeholder="e.g., Noise-Canceling Headphones" required>
+                
+                <label for="itemDescription">Add a description</label>
+                <textarea id="itemDescription" placeholder="e.g., High-quality headphones with noise cancellation"></textarea>
+                
+                <label for="itemPrice">Enter the price</label>
+                <input type="number" id="itemPrice" placeholder="e.g., 199.99" step="0.01" min="0">
+                
+                <label for="itemLink">Product URL (optional)</label>
+                <input type="url" id="itemLink" placeholder="e.g., https://amazon.com/product-link">
+
+                <label for="itemImage">Upload an image of the product (optional)</label>
+                <input type="file" id="itemImage" accept="image/*">
+
+                <button type="submit">Add Gift</button>
+                <button type="button" id="cancelButton">Cancel</button>
+            </form>
+            
+            <!-- Wishlist Items -->
+            <h3>My Wishlist</h3>
+            <div id="wishlistItems" class="wishlist-container">
+                <!-- Dynamically added items will appear here -->
+            </div>
+
+            <!-- Share Wishlist -->
+            <button id="shareButton">Share Wishlist</button>
+            <p id="shareableLink" style="display: none;">
+                Shareable Link: <a href="#" id="generatedLink" target="_blank"></a>
+            </p>
+        </div>
+
+        <!-- Angel Tree -->
+        <div id="angel-tree" class="feature-box">
+            <h2>Angel Tree</h2>
+            <p>Pick a name from our Angel Tree and send gifts to children in need.</p>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to partner with us? Email us at <a href="mailto:info@generosityhub.com">info@generosityhub.com</a>.</p>
-    </section>
+
+    <!-- Footer -->
     <footer>
         <p>© 2024 Givmas. All rights reserved.</p>
     </footer>
+
+    <!-- Script -->
+    <script src="wishlist.js"></script>
 </body>
 </html>
